@@ -1,0 +1,31 @@
+﻿Build started 3/22/2016 3:31:02 PM.
+     1>Project "C:\MAK\vrlink5.1.3a\examples\simple\talkHLA1516_64.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         talkHLA1516_64.vcxproj -> C:\MAK\vrlink5.1.3a\examples\simple\..\..\examples\simple\build64\Debug\talkHLA1516_64d.exe
+       PostBuildEvent:
+         setlocal
+         echo xcopy "C:\MAK\vrlink5.1.3a\examples\simple\..\..\examples\simple\build64\Debug\talkHLA1516_64d.exe" ..\..\bin64 /y /q
+         if %errorlevel% neq 0 goto :cmEnd
+         :cmEnd
+         endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+         :cmErrorLevel
+         exit /b %1
+         :cmDone
+         if %errorlevel% neq 0 goto :VCEnd
+         setlocal
+         xcopy "C:\MAK\vrlink5.1.3a\examples\simple\..\..\examples\simple\build64\Debug\talkHLA1516_64d.exe" ..\..\bin64 /y /q
+         if %errorlevel% neq 0 goto :cmEnd
+         :cmEnd
+         endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+         :cmErrorLevel
+         exit /b %1
+         :cmDone
+         if %errorlevel% neq 0 goto :VCEnd
+         :VCEnd
+         xcopy "C:\MAK\vrlink5.1.3a\examples\simple\..\..\examples\simple\build64\Debug\talkHLA1516_64d.exe" ..\..\bin64 /y /q
+         1 File(s) copied
+     1>Done Building Project "C:\MAK\vrlink5.1.3a\examples\simple\talkHLA1516_64.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.26
