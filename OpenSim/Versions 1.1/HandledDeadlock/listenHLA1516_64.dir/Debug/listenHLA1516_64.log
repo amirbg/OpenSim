@@ -1,0 +1,38 @@
+﻿Build started 3/2/2016 2:19:04 PM.
+     1>Project "C:\MAK\vrlink5.1.3a\examples\simple\listenHLA1516_64.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IC:\MAK\makRti4.4.1/include/HLA1516 /I../../include /Zi /nologo /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _DEBUG /D DtHLA=1 /D DtHLA_1516=1 /D RTI_USES_STD_FSTREAM=1 /D BOOST_HAS_THREADS /D _CRT_SECURE_NO_WARNINGS /D _CRT_NONSTDC_NO_DEPRECATE /D DT_USE_DLL /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"listenHLA1516_64.dir/Debug/" /Fd"listenHLA1516_64.dir/Debug/vc120.pdb" /Gd /TP /wd4251 /wd4267 /wd4311 /wd4312 /wd4275 /wd4675 /wd4250 /errorReport:prompt listen.cxx
+         listen.cxx
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D WIN32 /D _WINDOWS /D _DEBUG /D DtHLA=1 /D DtHLA_1516=1 /D RTI_USES_STD_FSTREAM=1 /D BOOST_HAS_THREADS /D _CRT_SECURE_NO_WARNINGS /D _CRT_NONSTDC_NO_DEPRECATE /D DT_USE_DLL /D "CMAKE_INTDIR=/\"Debug/\"" /l"0x0409" /I../../include /nologo /fo"listenHLA1516_64.dir/Debug/vrlink.res" ../../data/vrlink.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"..\..\examples\simple\build64\Debug\listenHLA1516_64d.exe" /INCREMENTAL /NOLOGO /LIBPATH:../../lib64 /LIBPATH:../../lib64/Debug /LIBPATH:C:\MAK\makRti4.4.1/lib /LIBPATH:C:\MAK\makRti4.4.1/lib/Debug kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib vlutild.lib matrixd.lib mtld.lib vld.lib libfedtime1516d_64.lib librti1516d_64.lib vlHLA1516d.lib ws2_32.lib /NODEFAULTLIB:msvcrt.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"../../examples/simple/build64/Debug/listenHLA1516_64d.pdb" /SUBSYSTEM:CONSOLE /LARGEADDRESSAWARE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"../../examples/simple/build64/Debug/listenHLA1516_64d.lib" /MACHINE:X64  /machine:x64 /debug listenHLA1516_64.dir/Debug/vrlink.res
+         listenHLA1516_64.dir/Debug/listen.obj
+         listenHLA1516_64.vcxproj -> C:\MAK\vrlink5.1.3a\examples\simple\..\..\examples\simple\build64\Debug\listenHLA1516_64d.exe
+       PostBuildEvent:
+         setlocal
+         echo xcopy "C:\MAK\vrlink5.1.3a\examples\simple\..\..\examples\simple\build64\Debug\listenHLA1516_64d.exe" ..\..\bin64 /y /q
+         if %errorlevel% neq 0 goto :cmEnd
+         :cmEnd
+         endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+         :cmErrorLevel
+         exit /b %1
+         :cmDone
+         if %errorlevel% neq 0 goto :VCEnd
+         setlocal
+         xcopy "C:\MAK\vrlink5.1.3a\examples\simple\..\..\examples\simple\build64\Debug\listenHLA1516_64d.exe" ..\..\bin64 /y /q
+         if %errorlevel% neq 0 goto :cmEnd
+         :cmEnd
+         endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+         :cmErrorLevel
+         exit /b %1
+         :cmDone
+         if %errorlevel% neq 0 goto :VCEnd
+         :VCEnd
+         xcopy "C:\MAK\vrlink5.1.3a\examples\simple\..\..\examples\simple\build64\Debug\listenHLA1516_64d.exe" ..\..\bin64 /y /q
+         1 File(s) copied
+     1>Done Building Project "C:\MAK\vrlink5.1.3a\examples\simple\listenHLA1516_64.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:11.14

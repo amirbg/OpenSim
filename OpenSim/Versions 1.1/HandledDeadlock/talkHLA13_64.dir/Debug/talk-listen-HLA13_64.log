@@ -1,0 +1,40 @@
+﻿Build started 5/5/2016 6:25:51 PM.
+     1>Project "C:\MAK\vrlink5.1.3a\examples\1-OpenSimProject\talk-listen-HLA13_64.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (talkHLA13_64.dir/Debug/) contains files shared from another project (talkHLA13_64.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IC:\MAK\makRti4.4.1/include/HLA13 /I../../include /Zi /nologo /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _DEBUG /D DtHLA=1 /D RTI_USES_STD_FSTREAM=1 /D BOOST_HAS_THREADS /D _CRT_SECURE_NO_WARNINGS /D _CRT_NONSTDC_NO_DEPRECATE /D DT_USE_DLL /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"talkHLA13_64.dir/Debug/" /Fd"talkHLA13_64.dir/Debug/vc120.pdb" /Gd /TP /wd4251 /wd4267 /wd4311 /wd4312 /wd4275 /wd4675 /wd4250 /errorReport:prompt talk.cxx
+         talk.cxx
+     1>c:\mak\vrlink5.1.3a\examples\1-opensimproject\ReceiveFromXplane.h(71): warning C4313: 'printf'  : '%d' in format string conflicts with argument 6 of type 'int *'
+     1>talk.cxx(55): warning C4101: 'duration' : unreferenced local variable
+     1>c:\mak\vrlink5.1.3a\examples\1-opensimproject\receivefromxplane.h(152): warning C4715: 'DataReceiver::initialize' : not all control paths return a value
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"..\..\examples\simple\build64\Debug\talkHLA13_64d.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\MAK\vrlink5.1.3a\include\matrix /LIBPATH:../../lib64 /LIBPATH:../../lib64/Debug /LIBPATH:C:\MAK\makRti4.4.1/lib /LIBPATH:C:\MAK\makRti4.4.1/lib/Debug kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib vlutild.lib matrixd.lib mtld.lib vld.lib libfedtimed_64.lib "libRTI-NGd_64.lib" vlHLA13d.lib ws2_32.lib /NODEFAULTLIB:msvcrt.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"../../examples/simple/build64/Debug/talkHLA13_64d.pdb" /SUBSYSTEM:CONSOLE /LARGEADDRESSAWARE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"../../examples/simple/build64/Debug/talkHLA13_64d.lib" /MACHINE:X64  /machine:x64 /debug talkHLA13_64.dir/Debug/vrlink.res
+         talkHLA13_64.dir/Debug/talk.obj
+         talk-listen-HLA13_64.vcxproj -> C:\MAK\vrlink5.1.3a\examples\1-OpenSimProject\..\..\examples\simple\build64\Debug\talkHLA13_64d.exe
+       PostBuildEvent:
+         setlocal
+         echo xcopy "C:\MAK\vrlink5.1.3a\examples\1-OpenSimProject\..\..\examples\simple\build64\Debug\talkHLA13_64d.exe" ..\..\bin64 /y /q
+         if %errorlevel% neq 0 goto :cmEnd
+         :cmEnd
+         endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+         :cmErrorLevel
+         exit /b %1
+         :cmDone
+         if %errorlevel% neq 0 goto :VCEnd
+         setlocal
+         xcopy "C:\MAK\vrlink5.1.3a\examples\1-OpenSimProject\..\..\examples\simple\build64\Debug\talkHLA13_64d.exe" ..\..\bin64 /y /q
+         if %errorlevel% neq 0 goto :cmEnd
+         :cmEnd
+         endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+         :cmErrorLevel
+         exit /b %1
+         :cmDone
+         if %errorlevel% neq 0 goto :VCEnd
+         :VCEnd
+         xcopy "C:\MAK\vrlink5.1.3a\examples\1-OpenSimProject\..\..\examples\simple\build64\Debug\talkHLA13_64d.exe" ..\..\bin64 /y /q
+         1 File(s) copied
+     1>Done Building Project "C:\MAK\vrlink5.1.3a\examples\1-OpenSimProject\talk-listen-HLA13_64.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.10

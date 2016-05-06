@@ -1,0 +1,7 @@
+﻿  talk.cxx
+  Unknown compiler version - please run the configure tests and report the results
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\dbghelp.h(1544): warning C4091: 'typedef ': ignored on left of '' when no variable is declared
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\dbghelp.h(3190): warning C4091: 'typedef ': ignored on left of '' when no variable is declared
+  talkDIS_64.vcxproj -> C:\MAK\vrlink5.1.3a\examples\simple\..\..\examples\simple\build64\Debug\talkDIS_64d.exe
+  xcopy "C:\MAK\vrlink5.1.3a\examples\simple\..\..\examples\simple\build64\Debug\talkDIS_64d.exe" ..\..\bin64 /y /q
+  1 File(s) copied
